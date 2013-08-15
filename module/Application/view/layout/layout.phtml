@@ -1,0 +1,17 @@
+<?php echo $this->doctype(); ?>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('Sweet Cakes | Virginia Beach Cake Decorator and Designer') ?>
+        
+        <?php $this->headLink()->appendStylesheet('/css/app.css'); ?>
+        <?php $this->headScript()->appendFile('http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js') ?>
+        <?php $this->headScript()->appendFile('/js/app.js') ?>
+        
+        <?php echo $this->headLink(); ?>
+    </head>
+    <body>
+        <?php echo $this->content; ?>
+        <?php echo $this->headScript(); ?>
+    </body>
+</html>
