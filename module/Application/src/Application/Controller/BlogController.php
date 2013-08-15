@@ -6,14 +6,14 @@ use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
 class BlogController extends AbstractActionController {
-    
+
     public function indexAction() {
         return new ViewModel();
     }
-    
-    public function viewAction(){
+
+    public function viewAction() {
         $this->layout('layout/interactive');
-        
+
         $slug = $this->params()->fromRoute('slug', null);
 
         $template = "application/blog/" . $slug;
@@ -31,5 +31,5 @@ class BlogController extends AbstractActionController {
         $view->setTemplate($template);
         return $view;
     }
-    
+
 }

@@ -39,6 +39,17 @@ return array(
                     ),
                 ),
             ),
+            'sitemap' => array(
+                'type' => 'Literal',
+                'options' => array(
+                    'route' => '/sitemap.xml',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'Application\Controller',
+                        'controller' => 'Index',
+                        'action' => 'sitemap',
+                    ),
+                ),
+            ),
             'contact' => array(
                 'type' => 'Literal',
                 'options' => array(
@@ -98,6 +109,17 @@ return array(
                         ),
                     ),
                 ),
+            ),
+            'rss' => array(
+                'type' => 'Literal',
+                'options' => array(
+                    'route' => '/rss',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'Application\Controller',
+                        'controller' => 'Index',
+                        'action' => 'rss'
+                    )
+                )
             ),
             'showcase' => array(
                 'type' => 'Literal',
