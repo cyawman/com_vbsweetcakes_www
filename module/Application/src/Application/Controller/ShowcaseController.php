@@ -22,6 +22,8 @@ class ShowcaseController extends AbstractActionController {
      * @return \Zend\View\Model\ViewModel
      */
     public function albumAction() {
+        $this->layout('layout/interactive');
+        
         $album = $this->params()->fromRoute('album');
         $slug = $this->params()->fromRoute('slug', null);
 

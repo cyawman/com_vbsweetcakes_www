@@ -12,6 +12,8 @@ class BlogController extends AbstractActionController {
     }
     
     public function viewAction(){
+        $this->layout('layout/interactive');
+        
         $slug = $this->params()->fromRoute('slug', null);
 
         $template = "application/blog/" . $slug;
