@@ -7,9 +7,9 @@ nbproject
 .project
 .settings
 composer.lock
+*.local.php
 vendor/bin
 /vendor/zendframework
-*.local.php
 /vendor/doctrine
-
 /vendor/composer
+/vendor/autoload.php
