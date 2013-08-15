@@ -11,6 +11,8 @@
         <?php echo $this->headLink(); ?>
     </head>
     <body>
+        <?php echo $this->navigation()->menu('site_navigation'); ?>
+        <?php echo $this->navigation()->breadcrumbs('site_navigation')->setLinkLast(true)->setMinDepth(0)->setMaxDepth(3)->setSeparator('&raquo;'); ?>
         <?php echo $this->content; ?>
         <?php echo $this->headScript(); ?>
     </body>

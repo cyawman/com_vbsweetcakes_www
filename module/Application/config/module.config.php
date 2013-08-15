@@ -88,7 +88,7 @@ return array(
                 ),
                 'may_terminate' => true,
                 'child_routes' => array(
-                    'album' => array(
+                    'default' => array(
                         'type' => 'Segment',
                         'options' => array(
                             'route' => '/[:action]',
@@ -111,7 +111,7 @@ return array(
                 ),
                 'may_terminate' => true,
                 'child_routes' => array(
-                    'album' => array(
+                    'default' => array(
                         'type' => 'Segment',
                         'options' => array(
                             'route' => '/[:album[/:slug]]',
