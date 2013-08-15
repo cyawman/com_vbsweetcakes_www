@@ -50,6 +50,17 @@ return array(
                     ),
                 ),
             ),
+            'success' => array(
+                'type' => 'Literal',
+                'options' => array(
+                    'route' => '/success',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'Application\Controller',
+                        'controller' => 'Index',
+                        'action' => 'success',
+                    ),
+                ),
+            ),
             'contact' => array(
                 'type' => 'Literal',
                 'options' => array(

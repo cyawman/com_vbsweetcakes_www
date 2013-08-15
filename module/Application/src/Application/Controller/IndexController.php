@@ -5,23 +5,26 @@ namespace Application\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Zend\Feed\Writer\Feed;
+use Zend\Form\Annotation\AnnotationBuilder;
+use Zend\Form\Element;
+use Application\Entity\Contact;
 
 class IndexController extends AbstractActionController {
 
     public function indexAction() {
         return new ViewModel();
     }
-    
-    public function sitemapAction(){
+
+    public function sitemapAction() {
         $this->getResponse()->getHeaders()->addHeaders(array('Content-type' => 'text/xml'));
         $view = new ViewModel();
         $view->setTerminal(true);
         return $view;
     }
-    
+
     public function rssAction() {
         $this->getResponse()->getHeaders()->addHeaders(array('Content-type' => 'text/xml'));
-        
+
         $feed = new Feed();
         $feed->setTitle('Sweet Cakes Blog');
         $feed->setDescription('RSS Feed for Sweet Cakes Blog');
@@ -49,14 +52,14 @@ class IndexController extends AbstractActionController {
         $feed->addEntry($entry);
 
         $rss = $feed->export('rss');
-        
+
         $view = new ViewModel();
         $view->setTerminal(true);
         $view->setVariable('rss', $rss);
         return $view;
     }
-    
-    public function viewAction(){
+
+    public function viewAction() {
         $slug = $this->params()->fromRoute('slug', null);
 
         $template = "application/index/" . $slug;
@@ -74,9 +77,34 @@ class IndexController extends AbstractActionController {
         $view->setTemplate($template);
         return $view;
     }
-    
-    public function contactAction(){
-        return new ViewModel();
+
+    public function contactAction() {
+        $contact = new Contact();
+        $builder = new AnnotationBuilder();
+        $form = $builder->createForm($contact);
+        $form->add(new Element\Csrf('security'));
+        $form->add(array(
+            'name' => 'send',
+            'attributes' => array(
+                'type' => 'submit',
+                'value' => 'Submit',
+            )
+        ));
+
+        if ($this->request->isPost()) {
+            $form->setData($this->request->getPost());
+
+            if ($form->isValid()) {
+                $this->flashMessenger()->addSuccessMessage('Thank you! Your message has been sent.');
+                $this->redirect()->toRoute('success');
+            }
+        }
+
+        return new ViewModel(array('form' => $form));
+    }
+
+    public function successAction() {
+        return new ViewModel(array('flashMessenger' => $this->flashMessenger()));
     }
 
 }

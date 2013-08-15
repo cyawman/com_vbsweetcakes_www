@@ -1,0 +1,7 @@
+<?php
+if ($this->flashMessenger->hasSuccessMessages()) {
+    foreach($this->flashMessenger->getSuccessMessages() as $message){
+        echo $message . '<br />';
+    }
+}
+?>
