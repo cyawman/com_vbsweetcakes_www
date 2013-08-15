@@ -11,7 +11,6 @@ class Contact {
     
     /**
      * @var string
-     * @ORM\Column(type="string", length=255, unique=true, nullable=false)
      * @Annotation\Attributes({"type":"text"})
      * @Annotation\Options({"label":"Name:"})
      */
@@ -19,7 +18,6 @@ class Contact {
     
     /**
      * @var string
-     * @ORM\Column(type="string", length=255, unique=true, nullable=false)
      * @Annotation\Attributes({"type":"text"})
      * @Annotation\Options({"label":"Email:"})
      */
@@ -27,7 +25,6 @@ class Contact {
     
     /**
      * @var string
-     * @ORM\Column(type="string", length=255, unique=true, nullable=false)
      * @Annotation\Attributes({"type":"text"})
      * @Annotation\Options({"label":"Phone:"})
      */
@@ -35,7 +32,6 @@ class Contact {
     
     /**
      * @var string
-     * @ORM\Column(type="string", length=255)
      * @Annotation\Attributes({"type":"textarea"})
      * @Annotation\Options({"label":"Comments:"})
      */

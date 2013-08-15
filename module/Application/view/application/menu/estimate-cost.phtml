@@ -1,1 +1,60 @@
-Estimate Cost
+Contact
+
+<?php
+if(!is_null($this->estimate)){
+    echo "Your estimated cost is around " . $this->estimate;
+}
+?>
+
+<?php
+$form = $this->form;
+$form->prepare();
+$form->setAttribute('action', $this->url('menu/default', array('action' => 'estimate-cost')));
+$form->setAttribute('method', 'post');
+$formLabel = $this->plugin('formLabel');
+echo $this->form()->openTag($form);
+?>
+<div class="form_element">
+    <?php
+    $type = $form->get('type');
+    echo $formLabel->openTag() . $type->getOption('label');
+    echo $this->formSelect($type);
+    echo $this->formElementErrors($type);
+    echo $formLabel->closeTag();
+    ?>
+</div>
+
+<div class="form_element">
+    <?php
+    $servings = $form->get('servings');
+    echo $formLabel->openTag() . $servings->getOption('label');
+    echo $this->formNumber($servings);
+    echo $this->formElementErrors($servings);
+    echo $formLabel->closeTag();
+    ?>
+</div>
+
+<div class="form_element">
+    <?php
+    $filling = $form->get('filling');
+    echo $formLabel->openTag() . $filling->getOption('label');
+    echo $this->formSelect($filling);
+    echo $this->formElementErrors($filling);
+    echo $formLabel->closeTag();
+    ?>
+</div>
+
+<div class="form_element">
+    <?php
+    $flavor = $form->get('flavor');
+    echo $formLabel->openTag() . $flavor->getOption('label');
+    echo $this->formSelect($flavor);
+    echo $this->formElementErrors($flavor);
+    echo $formLabel->closeTag();
+    ?>
+</div>
+
+<?php echo $this->formElement($form->get('security')) ?>
+<?php echo $this->formElement($form->get('send')) ?>
+
+<?php echo $this->form()->closeTag() ?>
