@@ -10,13 +10,6 @@ return array(
             array(
                 'label' => 'Menu',
                 'route' => 'menu',
-                'pages' => array(
-                    array(
-                        'label' => 'Cost Estimator',
-                        'route' => 'menu/default',
-                        'action' => 'estimate-cost'
-                    )
-                )
             ),
             array(
                 'label' => 'Showcase',
