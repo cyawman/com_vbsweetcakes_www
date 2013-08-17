@@ -33,7 +33,7 @@ return array(
                         'params' => array('album' => 'seasonal-cakes'),
                         'pages' => array(
                             array(
-                                'label' => 'Apple Cupcakes with Cinnamon Buttercream Frosting',
+                                'label' => 'Apple Cupcakes with Buttercream Frosting',
                                 'route' => 'showcase/default',
                                 'params' => array('album' => 'seasonal-cakes', 'slug' => 'apple-cupcakes-with-buttercream-frosting'),
                             )

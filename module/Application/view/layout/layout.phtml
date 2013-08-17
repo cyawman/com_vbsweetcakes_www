@@ -15,5 +15,6 @@
         <?php echo $this->navigation()->breadcrumbs('site_navigation')->setLinkLast(true)->setMinDepth(0)->setMaxDepth(3)->setSeparator('&raquo;'); ?>
         <?php echo $this->content; ?>
         <?php echo $this->headScript(); ?>
+        <?php echo $this->partial('layout/google-analytics'); ?>
     </body>
 </html>
