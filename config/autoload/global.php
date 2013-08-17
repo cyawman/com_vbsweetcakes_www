@@ -18,7 +18,26 @@ return array(
                     array(
                         'label' => 'Wedding Cakes',
                         'route' => 'showcase/default',
-                        'params' => array('album' => 'wedding-cakes')
+                        'params' => array('album' => 'wedding-cakes'),
+                        'pages' => array(
+                            array(
+                                'label' => 'Chocolate Fudge Cake with Cream Filling',
+                                'route' => 'showcase/default',
+                                'params' => array('album' => 'wedding-cakes', 'slug' => 'chocolate-fudge-cake-with-cream-filling'),
+                            )
+                        )
+                    ),
+                    array(
+                        'label' => 'Seasonal Cakes',
+                        'route' => 'showcase/default',
+                        'params' => array('album' => 'seasonal-cakes'),
+                        'pages' => array(
+                            array(
+                                'label' => 'Apple Cupcakes with Cinnamon Buttercream Frosting',
+                                'route' => 'showcase/default',
+                                'params' => array('album' => 'seasonal-cakes', 'slug' => 'apple-cupcakes-with-buttercream-frosting'),
+                            )
+                        )
                     )
                 )
             ),
