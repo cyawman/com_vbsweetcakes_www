@@ -201,6 +201,7 @@ return array(
             'layout/site-navigation' => __DIR__ . '/../view/layout/partial/site-navigation.phtml',
             'layout/breadcrumbs' => __DIR__ . '/../view/layout/partial/breadcrumbs.phtml',
             'layout/header' => __DIR__ . '/../view/layout/partial/header.phtml',
+            'layout/footer' => __DIR__ . '/../view/layout/partial/footer.phtml',
             'layout/google-analytics' => __DIR__ . '/../view/layout/partial/google-analytics.phtml',
             'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
             'error/404' => __DIR__ . '/../view/error/404.phtml',

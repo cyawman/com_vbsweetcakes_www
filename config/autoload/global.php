@@ -6,6 +6,7 @@ return array(
             array(
                 'label' => 'Home',
                 'route' => 'home',
+                'visible' => false
             ),
             array(
                 'label' => 'Menu',
@@ -53,13 +54,13 @@ return array(
                 )
             ),
             array(
-                'label' => 'About',
+                'label' => 'About Us',
                 'route' => 'home/default',
                 'use_route_match' => true,
                 'params' => array('slug' => 'about')
             ),
             array(
-                'label' => 'Contact',
+                'label' => 'Contact Us',
                 'route' => 'contact',
             )
         )

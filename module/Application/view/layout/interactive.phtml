@@ -4,6 +4,10 @@
         <meta charset="utf-8">
         <?php echo $this->headTitle('Sweet Cakes | Virginia Beach Cake Decorator and Designer') ?>
 
+        
+        <?php $this->headLink()->appendStylesheet('/css/reset.css'); ?>
+        <?php $this->headLink()->appendStylesheet('/css/text.css'); ?>
+        <?php $this->headLink()->appendStylesheet('/css/960.css'); ?>
         <?php $this->headLink()->appendStylesheet('/css/app.css'); ?>
         <?php $this->headScript()->appendFile('http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js') ?>
         <?php $this->headScript()->appendFile('/js/app.js') ?>
@@ -16,5 +20,6 @@
         <?php echo $this->partial('layout/disqus'); ?>
         <?php echo $this->headScript(); ?>
         <?php echo $this->partial('layout/google-analytics'); ?>
+        <?php echo $this->partial('layout/footer'); ?>
     </body>
 </html>
