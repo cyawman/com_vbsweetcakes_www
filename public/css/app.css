@@ -1,7 +1,8 @@
 body {background:#fff url('/img/top-bg.gif') repeat-x scroll 0 0; font-family: Arial}
 .site-header {border-bottom:1px solid #925538;}
+.site-header .logo img {padding-top:1px;}
 .site-navigation {display:block; float:left; clear:both; width:100%;}
-.site-navigation ul.navigation {margin:2px 0 0; padding:0 0 0 140px; list-style-type:none; float:left;}
+.site-navigation ul.navigation {margin:2px 0 0; padding:0; list-style-type:none; float:right;}
 .site-navigation ul.navigation li {display:block; float:left; margin:5px 0 0; padding:3px 10px 0;}
 .site-navigation ul.navigation li a {font-size:30px; color:#925538; text-decoration:none;}
 .site-navigation ul.navigation li a:hover {text-decoration:underline; color:#501a0d;}

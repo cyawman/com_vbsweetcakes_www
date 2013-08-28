@@ -54,13 +54,13 @@ return array(
                 )
             ),
             array(
-                'label' => 'About Us',
+                'label' => 'About',
                 'route' => 'home/default',
                 'use_route_match' => true,
                 'params' => array('slug' => 'about')
             ),
             array(
-                'label' => 'Contact Us',
+                'label' => 'Contact',
                 'route' => 'contact',
             )
         )
