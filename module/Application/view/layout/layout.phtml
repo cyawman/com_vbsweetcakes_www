@@ -4,20 +4,52 @@
         <meta charset="utf-8">
         <?php echo $this->headTitle('Sweet Cakes | Virginia Beach Cake Decorator and Designer') ?>
 
-        <?php $this->headLink()->appendStylesheet('/css/reset.css'); ?>
-        <?php $this->headLink()->appendStylesheet('/css/text.css'); ?>
-        <?php $this->headLink()->appendStylesheet('/css/960.css'); ?>
+        <?php $this->headLink()->appendStylesheet('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css'); ?>
         <?php $this->headLink()->appendStylesheet('/css/app.css'); ?>
         <?php $this->headScript()->appendFile('http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js') ?>
+        <?php $this->headScript()->appendFile('//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js') ?>
         <?php $this->headScript()->appendFile('/js/app.js') ?>
 
         <?php echo $this->headLink(); ?>
+        <?php echo $this->headScript(); ?>
     </head>
     <body>
-        <?php echo $this->partial('layout/header'); ?>
+        <div class="logo-wrapper">
+            <div class="container">
+                <a href="/"><img src="/img/logo-text.png" /></a>
+            </div>
+        </div>
+        <div class="navbar-wrapper">
+            <div class="container">
+                <div class="navbar navbar-default">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active first"><a href="#home">HOME</a></li>
+                            <li class="divider-vertical">|</li>
+                            <li><a href="#showcase">SHOWCASE</a></li>
+                            <li class="divider-vertical">|</li>
+                            <li><a href="#custom_cakes">CUSTOM CAKES</a></li>
+                            <li class="divider-vertical">|</li>
+                            <li><a href="#about">ABOUT</a></li>
+                            <li class="divider-vertical">|</li>
+                            <li><a href="#contact">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         <?php echo $this->content; ?>
-        <?php echo $this->headScript(); ?>
-        <?php echo $this->partial('layout/google-analytics'); ?>
-        <?php echo $this->partial('layout/footer'); ?>
+        <div class="footer-wrapper">
+            <div class="container">
+
+            </div>
+        </div>
     </body>
 </html>

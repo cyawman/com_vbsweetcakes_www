@@ -1,16 +1,31 @@
-body {background:#fff url('/img/top-bg.gif') repeat-x scroll 0 0; font-family: Arial}
-.site-header {border-bottom:1px solid #925538;}
-.site-header .logo img {padding-top:1px;}
-.site-navigation {display:block; float:left; clear:both; width:100%;}
-.site-navigation ul.navigation {margin:2px 0 0; padding:0; list-style-type:none; float:right;}
-.site-navigation ul.navigation li {display:block; float:left; margin:5px 0 0; padding:3px 10px 0;}
-.site-navigation ul.navigation li a {font-size:30px; color:#925538; text-decoration:none;}
-.site-navigation ul.navigation li a:hover {text-decoration:underline; color:#501a0d;}
-.site-navigation ul.navigation li ul {display:none;}
-.breadcrumbs {display:block; float:left; clear:both; width:100%;}
-.breadcrumbs a {padding:3px 5px;}
-.site-footer {background:transparent url('/img/footer.png') no-repeat scroll 0 0; color:#fff; height:170px;}
-.site-footer h2 {margin-top:10px; border-bottom:1px solid #fff;}
-.site-footer p {margin:0; padding:0;}
-.site-footer a {color:#e93129; font-style:italic; text-decoration:none;}
-.site-footer a:hover {text-decoration:underline;}
+body {font-family:Verdana; font-size:18px; color:#444;}
+form .form-group ul {color:#b94a48;}
+img.frame {border:2px solid #aaa; padding:2px; background-color:#fff;}
+.logo-wrapper {background-color:#e08e79;}
+.navbar-wrapper {background:transparent url('/img/navbar-bg.png') repeat-x scroll 0 0;}
+.navbar-wrapper .navbar {min-height:0; margin-bottom:0;}
+.navbar-wrapper .navbar-default {background-color: transparent; border:none; border-color: transparent;}
+.navbar-wrapper .navbar .nav .divider-vertical{color:#fff; font-size:26px;}
+.navbar-wrapper .navbar-default .navbar-toggle {background-color: #f0f0f0;}
+.navbar-wrapper .navbar-default .navbar-nav .first a {padding-left:0;}
+.navbar-wrapper .navbar-default .navbar-nav a {color: #fff; font-size:26px; font-weight:bold;}
+.navbar-wrapper .navbar-nav>li>a {padding-top:10px; padding-bottom:10px;}
+.navbar-wrapper .navbar-default .navbar-nav>.active>a, 
+.navbar-wrapper .navbar-default .navbar-nav>.active>a:hover, 
+.navbar-wrapper .navbar-default .navbar-nav>.active>a:focus {background-color:transparent; color: #fff;}
+.navbar-wrapper .navbar-default .navbar-nav>li>a:hover,
+.navbar-wrapper .navbar-default .navbar-nav>.active>a:hover {color:#ECE5CE;}
+.jumbotron {background-color:#c5e0dc; background:#c5e0dc url('/img/jumbotron-border-bottom.png') repeat-x bottom left scroll; padding-top:20px; padding-bottom:30px; font-family: Monotype Corsiva; font-weight: bold; color:#774f38; font-size:90px; margin-bottom:0;}
+.showcase-wrapper {margin-top:20px;}
+.showcase-wrapper .media-heading {font-weight:bold; font-size:22px;}
+.page-header {margin:0 0 20px;}
+.page-header h2 {font-size:48px; font-weight:bold; margin:0;}
+.page-header h2 small {font-size:22px; color:#aaaaaa;}
+.customcakes-wrapper {background:#f1d4af url('/img/custom-cakes-bg.png') repeat-x scroll 0 0; height:550px; margin:20px 0;}
+.customcakes-wrapper h2 {font-size:70px; font-weight:bold; color:#774f38;}
+.about-wrapper h2 {font-size:48px; font-weight:bold;}
+.about-wrapper p {font-size:24px;}
+.about-wrapper em {font-size:28px; font-weight:bold;}
+.contact-wrapper {background:#ece5ce url('/img/contact-bg.png') repeat-x scroll 0 0; margin:20px 0 0;}
+.contact-wrapper .bottom {background:#ece5ce url('/img/contact-bg.png') repeat-x scroll 0 0; height:10px;}
+.contact-wrapper h2 {font-size:48px; font-weight:bold;}

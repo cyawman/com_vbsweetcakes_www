@@ -1,27 +1,152 @@
-<div class="container_12">
-    <div class="grid_12">
-        <hgroup>
-            <h1>Sweet Cakes of Virgina Beach</h1>
-            <p>Sweet Cakes of Virginia Beach offers unique, one of a kind custom made birthday cakes, wedding cakes, cupcake cakes, tiered cakes, sheet cakes, holiday cakes and more! Sweet Cakes of Virginia Beach makes homemade cake batter, frosting, fondant and decorations.</p>
-            <p>Rebecca Yawman is a local cake decorator and designer. She values great tasting cake and custom designs at a fair price. If you want a custom cake for your next event then <a href="<?php echo $this->url('contact'); ?>">contact us</a> today!</p>
-        </hgroup>
+<?php $escaper = new Zend\Escaper\Escaper('utf-8'); ?>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="/img/photos/purple-rose-bud-anniversary-cake.jpg" alt="Purple Rose Bud Anniversary Cake for 2" class="frame" />
+            </div>
+            <div class="col-md-7">
+                <img src="/img/beautiful-delicious-cakes.png" alt="Beautiful and Delicious Cakes"  style="margin-top:20px;" />
+            </div>
+
+        </div>
+
     </div>
-    <div class="grid_4">
-        <hgroup>
-            <h2>Cake Decorator</h2>
-            <p>Rebecca Yawman a local Virginia Beach cake decorator and designer.</p>
-        </hgroup>
+</div>
+<div class="showcase-wrapper">
+    <div class="container">
+        <div class="page-header">
+            <a name="showcase"></a>
+            <h2>Showcase <small>Cakes / Cupcakes</small></h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object frame" src="/img/photos/mario-luigi-thumb.jpg" alt="" />
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Mario and Luigi</h4>
+                        <p>This was a Mario Brothers 4UP birthday cake for two twin boys.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object frame" src="/img/photos/buzz-lightyear-thumb.jpg" alt="" />
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Buzz Lightyear</h4>
+                        <p>A birthday cake for a Toy Story lover. Buzz Lightyear and his alien friend.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object frame" src="/img/photos/princess-thumb.jpg" alt="" />
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Beautiful Princess</h4>
+                        <p>Every princess wants a princess cake!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object frame" src="/img/photos/apple-thumb.jpg" alt="" />
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Apple Spice Cupcakes</h4>
+                        <p>Beautiful and delicious apple spiced cupcakes with jelly filling and butter cream frosting!</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object frame" src="/img/photos/sesame-street-thumb.jpg" alt="" />
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Sesame Street Cupcakes</h4>
+                        <p>That irresistible fluffy icing makes me love Sesame Street all over again.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object frame" src="/img/photos/pumpkin-patch-thumb.jpg" alt="" />
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">Pumpkin Patch Cupcakes</h4>
+                        <p>Cupcakes are "in" any day of the year. Welcome the Fall with these tasty pumpkin patch cupcakes :)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="grid_4">
-        <hgroup>
-            <h2>Custom Cake Designs</h2>
-            <p>If you are looking for a cake decorator in the Virginia Beach area then look no further.</p>
-        </hgroup>
+</div>
+<div class="customcakes-wrapper">
+    <div class="container">
+        <h2>Do You Need a <em>CUSTOM CAKE</em>?</h2>
     </div>
-    <div class="grid_4">
-        <hgroup>
-            <h2></h2>
-            <p></p>
-        </hgroup>
+</div>
+<div class="about-wrapper">
+    <div class="container">
+        <h2>About Us</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <p style="text-indent:15px">Sweet Cakes of Virginia Beach is a owned and operated by <em>BECKA YAWMAN</em>.</p>
+                <br />
+                <p>Our passion is crafting <em>BEAUTIFUL</em> and <em>DELICIOUS</em> cakes for any occasion at a fair and <em>AFFORDABLE</em> price.</p>
+                <br />
+                <p>Contact us today if you want a custom cake for your next event!</p>
+            </div>
+            <div class="col-md-4">
+                <img src="/img/photos/becka-yawman.jpg" alt="Rebecca Yawman" class="frame" />
+            </div>
+        </div>
     </div>
+</div>
+<div class="contact-wrapper">
+    <div class="container">
+        <h2>Contact Us<a name="contact"></a></h2>
+        <?php if (isset($this->successMessages)): ?>
+            <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <?php foreach ($this->successMessages as $message): ?>
+                    <p><?php echo $escaper->escapeHtml($message); ?></p>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+        <?php if (isset($this->mailException)): ?>
+            <div class="alert alert-success alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <p>Oh no! An error occured while emailing your form. Please try again :(</p>
+                <!-- <?php echo $this->mailException(); ?> -->
+            </div>
+        <?php endif; ?>
+        <?php $validationMessages = $this->form->getMessages(); ?>
+        <?php if (!empty($validationMessages)): ?>
+            <div class="alert alert-danger alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <p>Oops! There was a problem with the data entered into the form :(</p>
+                <!-- <?php print_r($validationMessages); ?> -->
+            </div>
+        <?php endif; ?>
+        <?php $this->form->prepare(); ?>
+        <form action="<?php echo $this->url('home'); ?>#contact" method="post">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-group <?php echo (isset($validationMessages['name']) ? 'has-error' : ''); ?> ">
+                        <?php echo $this->formRow($this->form->get('name')) ?>
+                    </div>
+                    <div class="form-group <?php echo (isset($validationMessages['email']) ? 'has-error' : ''); ?>">
+                        <?php echo $this->formRow($this->form->get('email')) ?>
+                    </div>
+                    <div class="form-group <?php echo (isset($validationMessages['comments']) ? 'has-error' : ''); ?>">
+                        <?php echo $this->formRow($this->form->get('comments')) ?>
+                    </div>
+                    <?php echo $this->formElement($this->form->get('security')) ?>
+                    <?php echo $this->formElement($this->form->get('submit')) ?>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="bottom"></div>
 </div>

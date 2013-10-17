@@ -22,142 +22,21 @@ return array(
                         'controller' => 'Index',
                         'action' => 'index',
                     ),
-                ),
-                'may_terminate' => true,
-                'child_routes' => array(
-                    'default' => array(
-                        'type' => 'Segment',
-                        'options' => array(
-                            'route' => '[:slug]',
-                            'constraints' => array(
-                                'slug' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                            ),
-                            'defaults' => array(
-                                'action' => 'view'
-                            ),
-                        ),
-                    ),
-                ),
-            ),
-            'sitemap' => array(
-                'type' => 'Literal',
-                'options' => array(
-                    'route' => '/sitemap.xml',
-                    'defaults' => array(
-                        '__NAMESPACE__' => 'Application\Controller',
-                        'controller' => 'Index',
-                        'action' => 'sitemap',
-                    ),
-                ),
-            ),
-            'success' => array(
-                'type' => 'Literal',
-                'options' => array(
-                    'route' => '/success',
-                    'defaults' => array(
-                        '__NAMESPACE__' => 'Application\Controller',
-                        'controller' => 'Index',
-                        'action' => 'success',
-                    ),
-                ),
-            ),
-            'contact' => array(
-                'type' => 'Literal',
-                'options' => array(
-                    'route' => '/contact',
-                    'defaults' => array(
-                        '__NAMESPACE__' => 'Application\Controller',
-                        'controller' => 'Index',
-                        'action' => 'contact',
-                    ),
-                ),
-            ),
-            'blog' => array(
-                'type' => 'Literal',
-                'options' => array(
-                    'route' => '/blog',
-                    'defaults' => array(
-                        '__NAMESPACE__' => 'Application\Controller',
-                        'controller' => 'Blog',
-                        'action' => 'index',
-                    ),
-                ),
-                'may_terminate' => true,
-                'child_routes' => array(
-                    'default' => array(
-                        'type' => 'Segment',
-                        'options' => array(
-                            'route' => '/[:slug]',
-                            'constraints' => array(
-                                'slug' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                            ),
-                            'defaults' => array(
-                                'action' => 'view'
-                            ),
-                        ),
-                    ),
-                ),
-            ),
-            'menu' => array(
-                'type' => 'Literal',
-                'options' => array(
-                    'route' => '/menu',
-                    'defaults' => array(
-                        '__NAMESPACE__' => 'Application\Controller',
-                        'controller' => 'Menu',
-                        'action' => 'index',
-                    ),
-                ),
-                'may_terminate' => true,
-                'child_routes' => array(
-                    'default' => array(
-                        'type' => 'Segment',
-                        'options' => array(
-                            'route' => '/[:action]',
-                            'constraints' => array(
-                                'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                            ),
-                        ),
-                    ),
-                ),
-            ),
-            'rss' => array(
-                'type' => 'Literal',
-                'options' => array(
-                    'route' => '/rss',
-                    'defaults' => array(
-                        '__NAMESPACE__' => 'Application\Controller',
-                        'controller' => 'Index',
-                        'action' => 'rss'
-                    )
                 )
             ),
             'showcase' => array(
-                'type' => 'Literal',
+                'type' => 'Segment',
                 'options' => array(
-                    'route' => '/showcase',
+                    'route' => '/showcase[/:slug]',
+                    'constraints' => array(
+                        'slug' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                    ),
                     'defaults' => array(
                         '__NAMESPACE__' => 'Application\Controller',
                         'controller' => 'Showcase',
                         'action' => 'index',
                     ),
-                ),
-                'may_terminate' => true,
-                'child_routes' => array(
-                    'default' => array(
-                        'type' => 'Segment',
-                        'options' => array(
-                            'route' => '/[:album[/:slug]]',
-                            'constraints' => array(
-                                'album' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                                'slug' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                            ),
-                            'defaults' => array(
-                                'action' => 'album'
-                            ),
-                        ),
-                    ),
-                ),
+                )
             ),
         ),
     ),
@@ -165,6 +44,9 @@ return array(
         'abstract_factories' => array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
             'Zend\Log\LoggerAbstractServiceFactory',
+        ),
+        'invokables' => array(
+            'ContactForm' => 'Application\Form\ContactForm'
         ),
         'aliases' => array(
             'translator' => 'MvcTranslator',
@@ -183,8 +65,6 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Application\Controller\Index' => 'Application\Controller\IndexController',
-            'Application\Controller\Blog' => 'Application\Controller\BlogController',
-            'Application\Controller\Menu' => 'Application\Controller\MenuController',
             'Application\Controller\Showcase' => 'Application\Controller\ShowcaseController'
         ),
     ),
@@ -196,10 +76,8 @@ return array(
         'exception_template' => 'error/index',
         'template_map' => array(
             'layout/layout' => __DIR__ . '/../view/layout/layout.phtml',
-            'layout/interactive' => __DIR__ . '/../view/layout/interactive.phtml',
             'layout/disqus' => __DIR__ . '/../view/layout/partial/disqus.phtml',
             'layout/site-navigation' => __DIR__ . '/../view/layout/partial/site-navigation.phtml',
-            'layout/breadcrumbs' => __DIR__ . '/../view/layout/partial/breadcrumbs.phtml',
             'layout/header' => __DIR__ . '/../view/layout/partial/header.phtml',
             'layout/footer' => __DIR__ . '/../view/layout/partial/footer.phtml',
             'layout/google-analytics' => __DIR__ . '/../view/layout/partial/google-analytics.phtml',
