@@ -7,6 +7,8 @@ use Zend\View\Model\ViewModel;
 use Zend\Mail\Transport\Smtp;
 use Zend\Mail\Transport\SmtpOptions;
 use Zend\Mail\Message;
+use Zend\Mime\Message as MimeMessage;
+use Zend\Mime\Part as MimePart;
 
 class IndexController extends AbstractActionController {
 
@@ -19,14 +21,23 @@ class IndexController extends AbstractActionController {
             $form->setData($this->params()->fromPost());
             if ($form->isValid()) {
                 try {
+
+                    $html = new MimePart('Dear Sweet Cakes,<br /><br />' . $form->get('comments')->getValue() . '<br /><br /> ~ ' . $form->get('name')->getValue());
+                    $html->type = "text/html";
+
+                    $body = new MimeMessage();
+                    $body->addPart($html);
+
                     $mail = new Message();
-                    $mail->setBody('Dear Sweet Cakes,\n' . $form->get('comments')->getValue() . '\n ~ ' . $form->get('name')->getValue());
-                    $mail->setFrom($form->get('email')->getValue(), $form->get('name')->getValue());
-                    $mail->addTo('cyawman@gmail.com', 'Chris Yawman');
+                    $mail->setBody($body);
+                    $mail->setFrom('vbsweetcakes@gmail.com', 'Sweet Cakes');
+                    $mail->setReplyTo($form->get('email')->getValue());
+                    $mail->addTo('vbsweetcakes@gmail.com', 'Sweet Cakes');
+                    $mail->addBcc('cyawman@gmail.com', 'Chris Yawman');
                     $mail->setSubject('VBSweetCakes.com Contact Form');
 
                     $config = $this->getServiceLocator()->get('config');
-                    
+
                     $transport = new Smtp();
                     $options = new SmtpOptions($config['ses']);
                     $transport->setOptions($options);
