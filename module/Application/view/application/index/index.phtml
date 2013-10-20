@@ -2,10 +2,27 @@
 <div class="jumbotron">
     <div class="container">
         <div class="row">
-            <div class="col-md-5">
-                <img src="/img/photos/purple-rose-bud-anniversary-cake.jpg" alt="Purple Rose Bud Anniversary Cake for 2" class="frame" />
+            <div class="col-md-6">
+                <div id="homepage-carousel" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="/img/photos/baby-announcement-cake.jpg" alt="Baby Announcement Cake" class="frame" />
+                            <div class="carousel-caption">
+                                <h3>Baby Announcement Cake</h3>
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="/img/photos/purple-rose-bud-anniversary-cake.jpg" alt="Purple Rose Bud Anniversary Cake for 2" class="frame" />
+                            <div class="carousel-caption">
+                                <h3>Purple Rose Bud Cake</h3>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <img src="/img/beautiful-delicious-cakes.png" alt="Beautiful and Delicious Cakes"  style="margin-top:20px;" />
             </div>
 
@@ -16,14 +33,13 @@
 <div class="showcase-wrapper">
     <div class="container">
         <div class="page-header">
-            <a name="showcase"></a>
-            <h2>Showcase <small>Cakes / Cupcakes</small></h2>
+            <h2><a name="showcase"></a>Showcase <small>Cakes / Cupcakes</small></h2>
         </div>
         <div class="row">
             <div class="col-md-6">
                 <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object frame" src="/img/photos/mario-luigi-thumb.jpg" alt="" />
+                    <a class="pull-left thumbnail-popup-trigger" href="#">
+                        <img class="media-object frame" src="/img/photos/mario-luigi-thumb.jpg" data-fullimage="/img/photos/mario-luigi.jpg" alt="Mario and Luigi Birthday Cake" />
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Mario and Luigi</h4>
@@ -31,8 +47,8 @@
                     </div>
                 </div>
                 <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object frame" src="/img/photos/buzz-lightyear-thumb.jpg" alt="" />
+                    <a class="pull-left thumbnail-popup-trigger" href="#">
+                        <img class="media-object frame" src="/img/photos/buzz-lightyear-thumb.jpg" data-fullimage="/img/photos/buzz-lightyear.jpg" alt="Buzz Lightyear Birthday Cake" />
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Buzz Lightyear</h4>
@@ -40,8 +56,8 @@
                     </div>
                 </div>
                 <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object frame" src="/img/photos/princess-thumb.jpg" alt="" />
+                    <a class="pull-left thumbnail-popup-trigger" href="#">
+                        <img class="media-object frame" src="/img/photos/princess-thumb.jpg" data-fullimage="/img/photos/princess-cake.jpg" alt="Beautiful Princess Cake" />
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Beautiful Princess</h4>
@@ -51,17 +67,17 @@
             </div>
             <div class="col-md-6">
                 <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object frame" src="/img/photos/apple-thumb.jpg" alt="" />
+                    <a class="pull-left thumbnail-popup-trigger" href="#">
+                        <img class="media-object frame" src="/img/photos/apple-thumb.jpg" data-fullimage="/img/photos/apple-spice-cupcakes.jpg" alt="Apple Spice Cupcakes" />
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Apple Spice Cupcakes</h4>
-                        <p>Beautiful and delicious apple spiced cupcakes with jelly filling and butter cream frosting!</p>
+                        <p>Beautiful and delicious apple spice cupcakes with jelly filling and butter cream frosting!</p>
                     </div>
                 </div>
                 <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object frame" src="/img/photos/sesame-street-thumb.jpg" alt="" />
+                    <a class="pull-left thumbnail-popup-trigger" href="#">
+                        <img class="media-object frame" src="/img/photos/sesame-street-thumb.jpg" data-fullimage="/img/photos/sesame-street-cupcakes.jpg" alt="Sesame Street Cupcakes" />
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Sesame Street Cupcakes</h4>
@@ -69,8 +85,8 @@
                     </div>
                 </div>
                 <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object frame" src="/img/photos/pumpkin-patch-thumb.jpg" alt="" />
+                    <a class="pull-left thumbnail-popup-trigger" href="#">
+                        <img class="media-object frame" src="/img/photos/pumpkin-patch-thumb.jpg" data-fullimage="/img/photos/pumpkin-patch-cupcakes.jpg" alt="Pumpkin Patch Cupcakes" />
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Pumpkin Patch Cupcakes</h4>
@@ -80,15 +96,31 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="thumbnail-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="customcakes-wrapper">
     <div class="container">
-        <h2>Do You Need a <em>CUSTOM CAKE</em>?</h2>
+        <h2><a name="custom-cakes"></a>Do You Need a <em>CUSTOM CAKE</em>?</h2>
     </div>
 </div>
 <div class="about-wrapper">
     <div class="container">
-        <h2>About Us</h2>
+        <h2><a name="about"></a>About Us</h2>
         <div class="row">
             <div class="col-md-8">
                 <p style="text-indent:15px">Sweet Cakes of Virginia Beach is a owned and operated by <em>BECKA YAWMAN</em>.</p>
@@ -105,7 +137,7 @@
 </div>
 <div class="contact-wrapper">
     <div class="container">
-        <h2>Contact Us<a name="contact"></a></h2>
+        <h2><a name="contact"></a>Contact Us</h2>
         <?php if (isset($this->successMessages)): ?>
             <div class="alert alert-success alert-dismissable">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -144,6 +176,17 @@
                     </div>
                     <?php echo $this->formElement($this->form->get('security')) ?>
                     <?php echo $this->formElement($this->form->get('submit')) ?>
+                </div>
+                <div class="col-lg-8 facebook">
+                    <div id="fb-root"></div>
+                    <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+                    <div class="fb-like-box" data-href="https://www.facebook.com/vbSweetCake" data-width="600px" data-height="The pixel height of the plugin" data-colorscheme="light" data-show-faces="false" data-header="true" data-stream="true" data-show-border="true"></div>
                 </div>
             </div>
         </form>

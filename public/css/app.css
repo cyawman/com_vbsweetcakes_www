@@ -15,7 +15,10 @@ img.frame {border:2px solid #aaa; padding:2px; background-color:#fff;}
 .navbar-wrapper .navbar-default .navbar-nav>.active>a:focus {background-color:transparent; color: #fff;}
 .navbar-wrapper .navbar-default .navbar-nav>li>a:hover,
 .navbar-wrapper .navbar-default .navbar-nav>.active>a:hover {color:#ECE5CE;}
-.jumbotron {background-color:#c5e0dc; background:#c5e0dc url('/img/jumbotron-border-bottom.png') repeat-x bottom left scroll; padding-top:20px; padding-bottom:30px; font-family: Monotype Corsiva; font-weight: bold; color:#774f38; font-size:90px; margin-bottom:0;}
+.jumbotron {background-color:#c5e0dc; background:#c5e0dc url('/img/jumbotron-border-bottom.png') repeat-x bottom left scroll; padding-top:40px; padding-bottom:30px; font-family: Monotype Corsiva; font-weight: bold; color:#774f38; font-size:90px; margin-bottom:0; height:555px}
+.jumbotron .carousel-caption {position:relative; text-align:left; color:#666; text-shadow:none; font-family:"Monotype Corsiva";}
+.jumbotron .carousel-caption h3 {font-size:24px; margin:0; padding:0; font-family:"Monotype Corsiva"}
+.jumbotron .carousel-caption p {font-size:14px; margin:0; padding:0; font-weight:normal;}
 .showcase-wrapper {margin-top:20px;}
 .showcase-wrapper .media-heading {font-weight:bold; font-size:22px;}
 .page-header {margin:0 0 20px;}
@@ -29,3 +32,7 @@ img.frame {border:2px solid #aaa; padding:2px; background-color:#fff;}
 .contact-wrapper {background:#ece5ce url('/img/contact-bg.png') repeat-x scroll 0 0; margin:20px 0 0;}
 .contact-wrapper .bottom {background:#ece5ce url('/img/contact-bg.png') repeat-x scroll 0 0; height:10px;}
 .contact-wrapper h2 {font-size:48px; font-weight:bold;}
+.contact-wrapper .facebook {text-align:right;}
+.contact-wrapper .fb-like-box {background-color:#fff;}
+.footer-wrapper {background-color:#774f38; color:#fff; font-size:12px;}
+.footer-wrapper p {margin:30px 0;}
