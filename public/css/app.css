@@ -2,24 +2,24 @@ body {font-family:Verdana; font-size:18px; color:#444;}
 form .form-group ul {color:#b94a48;}
 img.frame {border:2px solid #aaa; padding:2px; background-color:#fff;}
 .logo-wrapper {background-color:#e08e79;}
-.navbar-wrapper {background:transparent url('/img/navbar-bg.png') repeat-x scroll 0 0;}
+.navbar-wrapper {background:#B77463 url('/img/navbar-bg.png') repeat-x scroll 0 0;}
 .navbar-wrapper .navbar {min-height:0; margin-bottom:0;}
 .navbar-wrapper .navbar-default {background-color: transparent; border:none; border-color: transparent;}
+.navbar-wrapper .navbar-default .navbar-collapse {border:none;}
 .navbar-wrapper .navbar .nav .divider-vertical{color:#fff; font-size:26px;}
 .navbar-wrapper .navbar-default .navbar-toggle {background-color: #f0f0f0;}
-.navbar-wrapper .navbar-default .navbar-nav .first a {padding-left:0;}
-.navbar-wrapper .navbar-default .navbar-nav a {color: #fff; font-size:26px; font-weight:bold;}
-.navbar-wrapper .navbar-nav>li>a {padding-top:10px; padding-bottom:10px;}
+.navbar-wrapper .navbar-default .navbar-nav a {color: #fff; font-size:14px; font-weight:bold;}
 .navbar-wrapper .navbar-default .navbar-nav>.active>a, 
 .navbar-wrapper .navbar-default .navbar-nav>.active>a:hover, 
 .navbar-wrapper .navbar-default .navbar-nav>.active>a:focus {background-color:transparent; color: #fff;}
 .navbar-wrapper .navbar-default .navbar-nav>li>a:hover,
 .navbar-wrapper .navbar-default .navbar-nav>.active>a:hover {color:#ECE5CE;}
-.jumbotron {background-color:#c5e0dc; background:#c5e0dc url('/img/jumbotron-border-bottom.png') repeat-x bottom left scroll; padding-top:40px; padding-bottom:30px; font-family: Monotype Corsiva; font-weight: bold; color:#774f38; font-size:90px; margin-bottom:0; height:555px}
+.navbar-wrapper .navbar-default .navbar-toggle {margin:0;}
+.jumbotron {background-color:#c5e0dc; background:#c5e0dc url('/img/jumbotron-border-bottom.png') repeat-x bottom left scroll; padding-top:40px; padding-bottom:30px; font-family: Monotype Corsiva; font-weight: bold; color:#774f38; font-size:90px; margin-bottom:0;}
 .jumbotron .carousel-caption {position:relative; text-align:left; color:#666; text-shadow:none; font-family:"Monotype Corsiva";}
 .jumbotron .carousel-caption h3 {font-size:24px; margin:0; padding:0; font-family:"Monotype Corsiva"}
 .jumbotron .carousel-caption p {font-size:14px; margin:0; padding:0; font-weight:normal;}
-.showcase-wrapper {margin-top:20px;}
+.showcase-wrapper {background-color:#fff; margin-top:20px;}
 .showcase-wrapper .media-heading {font-weight:bold; font-size:22px;}
 .page-header {margin:0 0 20px;}
 .page-header h2 {font-size:48px; font-weight:bold; margin:0;}
@@ -27,6 +27,7 @@ img.frame {border:2px solid #aaa; padding:2px; background-color:#fff;}
 .customcakes-wrapper {background:#f1d4af url('/img/custom-cakes-bg.png') repeat-x scroll 0 0; margin:20px 0;}
 .customcakes-wrapper h2 {font-size:70px; font-weight:bold; color:#774f38;}
 .customcakes-wrapper .bottom {background:#ece5ce url('/img/custom-cakes-bg.png') repeat-x scroll 0 0; height:10px;}
+.about-wrapper {background-color:#fff;}
 .about-wrapper h2 {font-size:48px; font-weight:bold;}
 .about-wrapper p {font-size:24px;}
 .about-wrapper em {font-size:28px; font-weight:bold;}
@@ -37,3 +38,27 @@ img.frame {border:2px solid #aaa; padding:2px; background-color:#fff;}
 .contact-wrapper .fb-like-box {background-color:#fff;}
 .footer-wrapper {background-color:#774f38; color:#fff; font-size:12px;}
 .footer-wrapper p {margin:30px 0;}
+
+@media (min-width: 768px) {
+    .navbar-wrapper .navbar-nav>li>a {padding-top:10px; padding-bottom:10px;}
+    .navbar-wrapper .navbar-default .navbar-nav .first a {padding-left:0;}
+    .navbar-wrapper .navbar-default .navbar-nav a {color: #fff; font-weight:bold;}
+    .navbar-wrapper .navbar-default .navbar-nav>li>a:hover,
+    .navbar-wrapper .navbar-default .navbar-nav>.active>a:hover {color:#ECE5CE;}
+    .navbar-wrapper .navbar-default .navbar-nav>.active>a, 
+    .navbar-wrapper .navbar-default .navbar-nav>.active>a:hover, 
+    .navbar-wrapper .navbar-default .navbar-nav>.active>a:focus {color: #fff;}
+    .navbar-wrapper .navbar-default .navbar-nav>.active>a, 
+    .navbar-wrapper .navbar-default .navbar-nav>.active>a:hover, 
+    .navbar-wrapper .navbar-default .navbar-nav>.active>a:focus {background-color:transparent; color: #fff;}
+    .navbar-wrapper .navbar-default .navbar-nav>li>a:hover,
+    .navbar-wrapper .navbar-default .navbar-nav>.active>a:hover {color:#ECE5CE;}
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+    .navbar-wrapper .navbar-default .navbar-nav a {font-size:18px;}
+}
+
+@media (min-width: 992px) {
+    .navbar-wrapper .navbar-default .navbar-nav a {color: #fff; font-size:26px; font-weight:bold;}
+}

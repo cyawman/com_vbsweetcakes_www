@@ -10,7 +10,7 @@ var SweetCakes = (function($){
         var $target = $(event.target);
         $('#thumbnail-popup .modal-body img').remove();
         $('#thumbnail-popup .modal-title').text($target.attr('alt'));
-        $('#thumbnail-popup .modal-body').append($('<img src="'+$target.data('fullimage')+'"></img>'));
+        $('#thumbnail-popup .modal-body').append($('<img src="'+$target.data('fullimage')+'" class="img-responsive"></img>'));
         $('#thumbnail-popup').modal();
     }
     
