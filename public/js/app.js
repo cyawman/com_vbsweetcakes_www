@@ -2,7 +2,9 @@ var SweetCakes = (function($){
     
     var bootstrap = function(){
         $('.thumbnail-popup-trigger').on('click', handleThumbnailPopup);
-        $("#homepage-carousel").carousel();
+        $("#homepage-carousel").carousel({
+            interval: 3000
+        });
     }
     
     var handleThumbnailPopup = function(event){
