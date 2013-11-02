@@ -16,6 +16,7 @@ img.frame {border:2px solid #aaa; padding:2px; background-color:#fff;}
 .navbar-wrapper .navbar-default .navbar-nav>.active>a:hover {color:#ECE5CE;}
 .navbar-wrapper .navbar-default .navbar-toggle {margin:0;}
 .jumbotron {background-color:#c5e0dc; background:#c5e0dc url('/img/jumbotron-border-bottom.png') repeat-x bottom left scroll; padding-top:40px; padding-bottom:30px; font-family: Monotype Corsiva; font-weight: bold; color:#774f38; font-size:90px; margin-bottom:0;}
+#homepage-carousel .item img {width: auto; height: 350px; max-height: 350px;}
 .jumbotron .carousel-caption {position:relative; text-align:left; color:#666; text-shadow:none; font-family:"Monotype Corsiva";}
 .jumbotron .carousel-caption h3 {font-size:24px; margin:0; padding:0; font-family:"Monotype Corsiva"}
 .jumbotron .carousel-caption p {font-size:14px; margin:0; padding:0; font-weight:normal;}
